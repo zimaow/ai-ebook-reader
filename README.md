@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Voxe - AI E-book Reader
+
+An AI-powered e-book reader with text-to-speech capabilities. Upload EPUB files and have them read aloud with real-time sentence highlighting.
+
+## Features
+
+- 📚 Upload and parse EPUB files
+- 🔊 Text-to-speech with sentence highlighting
+- ⏯️ Play, pause, and resume functionality
+- 📱 Mobile-friendly responsive design
+- 🎯 Click any sentence to start reading from that point
+- 🌓 Dark mode support
+
+## Tech Stack
+
+- Next.js 16 (Static Export)
+- TypeScript
+- Tailwind CSS
+- epubjs for EPUB parsing
+- Web Speech API for text-to-speech
 
 ## Getting Started
 
-First, run the development server:
+### Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+The static site will be generated in the `out` directory.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This app is configured for GitHub Pages deployment. Push to the `main` branch to trigger automatic deployment via GitHub Actions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How to Use
 
-## Deploy on Vercel
+1. Upload an EPUB file using the file input
+2. Wait for the book to be parsed (cover pages are automatically skipped)
+3. Click the Play button or click any sentence to start reading
+4. Click the currently highlighted sentence to pause/resume
+5. Click a different sentence to jump to that location
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
